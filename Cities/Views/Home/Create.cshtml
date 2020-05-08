@@ -1,0 +1,33 @@
+﻿@model Cities.Models.City
+
+@{ Layout = "_Layout"; }
+
+<form method="post">
+    <div class="form-group">
+        <label helper-for="Name" />
+        <input helper-for="Name" />
+    </div>
+    <div class="form-group">
+        <label helper-for="Country" />
+        <input helper-for="Country" />
+    </div>
+    <div class="form-group">
+        <label helper-for="Population" />
+        <input helper-for="Population" />
+    </div>
+    <div theme="danger">
+        <button type="submit">Add</button>
+        <button type="reset">Reset</button>
+        <a href="/Home/Index">Cancel</a>
+
+
+        @*using bs-button-color changes the color of a button*@
+        @*<button type="submit" bs-button-color="success">Add</button>
+        <button type="reset" class="btn btn-primary">Reset</button>
+        <a bs-button-color="success" href="/Home/Index">Cancel</a>*@
+
+        @*using class FormButtonTagHelper i transform this into the regular html elements*@
+        @*<formbutton type ="submit" bg-color="danger"/>
+        <formbutton type="reset>" />*@
+    </div>
+</form>
